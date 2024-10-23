@@ -1,0 +1,14 @@
+services:
+  nginx:
+    build:
+      context: ./nginx/
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d
+
+  website:
+    build:
+      context: ./website/
+    expose:
+      - "3000"
