@@ -6,9 +6,11 @@ services:
       - "80:80"
     volumes:
       - ./nginx/conf.d:/etc/nginx/conf.d
+    image: "socialmaker/khojomojo-nginx:latest"
 
   website:
     build:
       context: ./website/
     expose:
       - "3000"
+    image: "socialmaker/khojomojo-website:latest"
