@@ -17,7 +17,7 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: "Khojo Mojo",
-  description: "Reunite with your lost items. Search our lost and found database or post your lost or found item to connect with someone who can help. Reclaim your lost belongings or help someone find theirs.",
+  description: "Reunite with your lost items. Search our database or report an item to connect with someone who can help. Reclaim your lost belongings or help someone find theirs.",
   applicationName: "Khojo Mojo",
   authors: {
     url: "https://github.com/JohnRaizada",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   robots: "index, follow",
   openGraph: {
     title: "Khojo Mojo",
-    description: "Reunite with your lost items. Search our lost and found database or post your lost or found item to connect with someone who can help. Reclaim your lost belongings or help someone find theirs.",
+    description: "Reunite with your lost items. Search our database or report an item to connect with someone who can help. Reclaim your lost belongings or help someone find theirs.",
     emails: "contact@khojomojo.org",
     phoneNumbers: "+91 9934583328",
     siteName: "Khojo Mojo",
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    description: "Reunite with your lost items. Search our lost and found database or post your lost or found item to connect with someone who can help. Reclaim your lost belongings or help someone find theirs.",
+    description: "Reunite with your lost items. Search our database or report an item to connect with someone who can help. Reclaim your lost belongings or help someone find theirs.",
     title: "Khojo Mojo",
   },
   formatDetection: {
