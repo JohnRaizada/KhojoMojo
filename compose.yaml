@@ -6,7 +6,11 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./nginx/config:/etc/nginx
+      - staticfiles:/app/staticfiles
+    develop:
+      watch:
+        - path: ./nginx/
+          action: rebuild
   website:
     build:
       context: ./website/
@@ -16,3 +20,17 @@ services:
       watch:
         - path: ./website/
           action: rebuild
+  api:
+    build:
+      context: ./api/
+    command: gunicorn api.wsgi:application --bind 0.0.0.0:8000
+    expose:
+      - "8000"
+    volumes:
+      - staticfiles:/app/staticfiles
+    develop:
+      watch:
+        - path: ./api/
+          action: rebuild
+volumes:
+  staticfiles:
