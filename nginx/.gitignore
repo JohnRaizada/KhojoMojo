@@ -1,0 +1,15 @@
+# SSL Certificates
+*.key
+*.pem
+*.crt
+*.csr
+*.cer
+*.pfx
+*.p12
+*.p7b
+*.p7c
+*.spc
+*.der
+
+# ssl folder
+ssl/
