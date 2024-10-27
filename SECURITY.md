@@ -4,7 +4,7 @@ This document outlines the security policy for this project.  It details how to 
 
 ## Reporting a Vulnerability
 We appreciate your help in keeping this project secure. If you discover a security vulnerability, please report it responsibly by following these steps:
-1. **Email**: Send an [email](mailto:adityaiukumar%40gmail.com?subject=KhojoMojo%20Vulnerability) with a detailed description of the vulnerability.
+1. **Email**: Send an [email](mailto:contact%40khojomojo.org?subject=KhojoMojo%20Vulnerability) with a detailed description of the vulnerability.
 2. **Provide a detailed description of the vulnerability.** This should include:
 * Steps to reproduce the vulnerability.
 * Expected behavior vs. actual behavior.

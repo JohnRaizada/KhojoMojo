@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Khojo Mojo",
     description: "Reunite with your lost items. Search our lost and found database or post your lost or found item to connect with someone who can help. Reclaim your lost belongings or help someone find theirs.",
-    emails: "adityaiukumar@gmail.com",
+    emails: "contact@khojomojo.org",
     phoneNumbers: "+91 9934583328",
     siteName: "Khojo Mojo",
     locale: "en_IN",
