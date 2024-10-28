@@ -12,7 +12,3 @@ COPY ./Pipfile ./Pipfile.lock /app/
 RUN pip install pipenv && pipenv install --system --deploy
 
 COPY . .
-
-RUN ["python", "manage.py", "collectstatic", "--noinput"]
-
-RUN ["python", "manage.py", "migrate"]

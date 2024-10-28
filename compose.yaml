@@ -15,7 +15,7 @@ services:
     build:
       context: ./website/
     expose:
-      - "3000"
+      - $WEBSITE_PORT
     develop:
       watch:
         - path: ./website/
@@ -23,11 +23,13 @@ services:
   api:
     build:
       context: ./api/
-    command: gunicorn api.wsgi:application --bind 0.0.0.0:8000
+    command: gunicorn api.wsgi:application --bind $API_HOST:$API_PORT
     expose:
-      - "8000"
+      - $API_PORT
     volumes:
       - staticfiles:/app/staticfiles
+    env_file:
+      - ./api/.env
     develop:
       watch:
         - path: ./api/
