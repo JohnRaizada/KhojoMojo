@@ -1,9 +1,9 @@
 upstream website{
-    server website:3000;
+    server website:${WEBSITE_PORT};
 }
 
 upstream api{
-    server api:8000;
+    server api:${API_PORT};
 }
 server{
     listen 80;
@@ -13,8 +13,8 @@ server{
 server{
     listen 443 ssl;
     listen [::]:443 ssl;
-    ssl_certificate /etc/nginx/ssl/khojomojo.org.pem;
-    ssl_certificate_key /etc/nginx/ssl/khojomojo.org.key;
+    ssl_certificate ${SSL_CERTIFICATE};
+    ssl_certificate_key ${SSL_CERTIFICATE_KEY};
     location /{
         proxy_pass http://website;
     }
