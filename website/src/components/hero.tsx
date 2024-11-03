@@ -1,6 +1,6 @@
 export default function Hero() {
     return (
-        <section className="pt-28 lg:pt-40 px-[20px] lg:px-[300px] ">
+        <section className="pt-28 lg:pt-40 px-[1.25rem] xl:px-[12.75rem]">
             <h1 className="text-center text-[2rem] lg:text-[4rem] lg:leading-[5.75rem] leading-10 font-medium">
                 Reunite with your lost items.
             </h1>
