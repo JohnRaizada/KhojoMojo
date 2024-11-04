@@ -5,9 +5,9 @@ services:
     ports:
       - "80:80"
       - "443:443"
+    env_file: .env
     volumes:
       - staticfiles:/app/staticfiles
-    env_file: .env
     develop:
       watch:
         - path: ./nginx/
@@ -15,7 +15,7 @@ services:
   website:
     build:
       context: ./website/
-    command: yarn start -p $WEBSITE_PORT
+    command: yarn $YARN_SCRIPT -p $WEBSITE_PORT
     expose:
       - $WEBSITE_PORT
     develop:
@@ -28,9 +28,10 @@ services:
     command: gunicorn api.wsgi:application --bind $API_HOST:$API_PORT
     expose:
       - $API_PORT
+    env_file: .env
     volumes:
       - staticfiles:/app/staticfiles
-    env_file: .env
+      - ./api/db.sqlite3:/app/db.sqlite3
     develop:
       watch:
         - path: ./api/

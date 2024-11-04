@@ -6,8 +6,13 @@ name = "pypi"
 [packages]
 django = "*"
 gunicorn = "*"
+django-storages = {extras = ["s3"], version = "*"}
+djangorestframework = "*"
+django-filter = "*"
 
 [dev-packages]
+django-debug-toolbar = "*"
+requests = "*"
 
 [requires]
 python_version = "3.12"
