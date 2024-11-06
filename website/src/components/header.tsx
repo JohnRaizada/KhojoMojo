@@ -22,7 +22,7 @@ export default function Header() {
                         <IoMenu className="block lg:hidden text-white text-2xl "/></button>
                 </nav>
             </span>
-            {isOpen && <nav className="lg:hidden flex flex-col items-center justify-items-start px-8 pb-2 border-b-[1px] border-b-gray-500">
+            {isOpen && <nav className="flex flex-col items-center justify-items-start px-8 pb-2 border-b-[1px] border-b-gray-500">
                 <ul className=" w-full divide-y divide-solid divide-gray-500 text-gray-300">
                     {navLinks.map((item, index) => (
                         <li key={index} className="py-2">{item.name}</li>

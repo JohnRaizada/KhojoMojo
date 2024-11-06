@@ -1,6 +1,8 @@
+// import Link from "next/link";
+
 export default function Hero() {
     return (
-        <section className="pt-28 lg:pt-40 px-[1.25rem] xl:px-[12.75rem]">
+        <section className="pt-[2.25rem] lg:pt-[5.25rem] px-[1.25rem] xl:px-[12.75rem]">
             <h1 className="text-center text-[2rem] lg:text-[4rem] lg:leading-[5.75rem] leading-10 font-medium">
                 Reunite with your lost items.
             </h1>
