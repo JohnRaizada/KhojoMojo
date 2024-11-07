@@ -1,4 +1,4 @@
-// import Link from "next/link";
+import Link from "next/link";
 
 export default function Hero() {
     return (
@@ -10,8 +10,8 @@ export default function Hero() {
                 Search our database or report an item to connect with someone who can help. Reclaim your lost belongings or help someone find theirs.
             </p>
             <span className="flex w-full gap-x-4 pt-8 lg:gap-x-24 justify-center">
-                <button className="font-medium bg-red-700 p-[0.625rem] rounded-lg w-1/2 py-4 px-8 lg:w-fit">I Lost Something</button>
-                <button className="font-medium bg-green-700 p-[0.625rem] rounded-lg w-1/2 py-4 px-8 lg:w-fit">I Found Something</button>
+                <Link href="/lostForm"  className="font-medium bg-red-700 p-[0.625rem] text-center rounded-lg w-1/2 py-4 px-8 lg:w-fit">I Lost Something</Link>
+                <Link href="/foundForm"  className="font-medium bg-green-600 p-[0.625rem] text-center rounded-lg w-1/2 py-4 px-8 lg:w-fit">I Found Something</Link>
             </span>
         </section>
     )
