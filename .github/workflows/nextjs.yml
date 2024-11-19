@@ -52,7 +52,8 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "20"
-          cache: cd ${{ github.workspace }}/website && ${{ steps.detect-package-manager.outputs.manager }}
+          run: cd ${{ github.workspace }}/website
+          cache: ${{ steps.detect-package-manager.outputs.manager }}
       - name: Setup Pages
         uses: actions/configure-pages@v5
         with:
@@ -72,7 +73,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
-        run: cd ${{ github.workspace }}/website && ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
       - name: Upload artifact
