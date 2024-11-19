@@ -13,7 +13,7 @@ export default function Header() {
     return (
         <header className="fixed top-0 w-full backdrop-blur-md shadow-2xl-[0 40px 30px rgba(0, 0, 0, 0.1)]">
             <span className="flex items-center justify-between py-4 lg:mx-auto lg:px-20 sm:px-5 sm:mx-auto">
-                <Link href="/"><Image src="/KhojoMojo-Logo-v1.0-Light.svg" alt="Khojo Mojo Logo" width="200" height="1" className="font-medium flex items-center px-5"/></Link>
+                <Link href="/"><Image src="./KhojoMojo-Logo-v1.0-Light.svg" alt="Khojo Mojo Logo" width="200" height="1" className="font-medium flex items-center px-5"/></Link>
                 <nav className="flex gap-x-5 items-center justify-end px-5">
                     <ul className="hidden lg:flex gap-x-[56px] lg:px-7 text-gray-300">
                         {navLinks.map((item, index) => (<li key={index}>{item.name}</li>))}
